@@ -8,7 +8,7 @@ Features
 * Cross-platform
 * Respects non-latin filenames
 * Generates slightly smaller files than Tar
-* Simple and straightforward, easy to decode and encode in any language with native Unicode support
+* Simple and straightforward, easy to pack and unpack in any language with native Unicode support
 * Can be used as an asset container for game engines
 
 Current limitations
@@ -19,3 +19,13 @@ Eventually these issues may be solved:
 * Doesn't keep empty directories
 * Dealing with large files is not efficient (no bufferization, files are loaded in memory entirely)
 * Very basic format - probably lacks most of your desired features (symlinks, EA, concatenation, encryption, etc).
+
+Usage
+-----
+Pack:
+
+    box inputDir [outputFile.box]
+    
+Unpack:
+
+    box inputFile.box [outputDir]
