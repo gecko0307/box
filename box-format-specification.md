@@ -17,7 +17,7 @@ A list of file entries. Total number of entries is determined in header section 
 
 A file entry consists of the following:
 * 4 bytes (uint) - file path size in bytes
-* N bytes - file path in UTF-8 encoding. Path is relative to root directory (that is, a directory that was used to pack). Directory separator character is "/" under all platforms
+* N bytes - file path in UTF-8 encoding. Path is relative to root directory (that is, a directory contents of which was packed in *.box file). Directory separator character is "/" under all platforms
 * 8 bytes (ulong) - file byte offset relative to beginning of the *.box file
 * 8 bytes (ulong) - file size in bytes
 
