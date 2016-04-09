@@ -139,7 +139,11 @@ void unpack(string inpFile, string outDir)
     auto f = File(inpFile, "r");
     ubyte[4] magic;
     f.rawRead(magic);
-    // TODO: assert magic
+    if (magic != "BOXF")
+    {
+        writefln("Error: invalid or unsupported box file \"%s\"", inpFile);
+        return;
+    }
 
     ubyte[8] buf;
     f.rawRead(buf);
@@ -216,4 +220,5 @@ void main(string[] args)
         unpack(input, outDir);
     }
 }
+
 
